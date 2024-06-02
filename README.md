@@ -1,0 +1,2 @@
+# ObsyncFeishu
+Obsidian与飞书多维表格数据双向同步脚本
