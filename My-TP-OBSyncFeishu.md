@@ -5,17 +5,10 @@
 
 // 飞书同步设置
 const feishuSettings = {
-  appId: "cli_a6def2f27262d00c",
-  appSecret: "DkzLF8S0SqHhdZ9nbppBCfgFv3kNhjzE",
-  appToken: "QlRjbXqMtak2BAsTgLMcmknjneh",
-  tableID: "tblPc05bn821bRET",
-}
-
-const customFields = {
-  appId: "cli_a6def2f27262d00c",
-  appSecret: "DkzLF8S0SqHhdZ9nbppBCfgFv3kNhjzE",
-  appToken: "QlRjbXqMtak2BAsTgLMcmknjneh",
-  tableID: "tblPc05bn821bRET",
+  appId: "替换成你的appId",
+  appSecret: "替换成你的appSecret",
+  appToken: "替换成你的appToken",
+  tableID: "替换成你的tableID",
 }
 
 //把feishuSettings中的参数内容传递给ObSyncFeishu
