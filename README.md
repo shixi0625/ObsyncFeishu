@@ -4,7 +4,10 @@
 与区别于Obsidian官方的同步功能，这个脚本是把我们Obsidian库中指定的笔记数据和内容同步到飞书多维表格，或者把飞书多维表格数据库里的内容同步到Obsidian库中
 
 以实现更好的数据使用和管理的目的，而不是单纯的文件同步
-
+# 脚本功能
+- [x] Obsidian与飞书多维表格之间数据的双向同步
+![ObsyncFeishu_脚本功能_20240603_#功能框_1.png](https://shixi-rioto.oss-cn-shenzhen.aliyuncs.com/ObsyncFeishu_%E8%84%9A%E6%9C%AC%E5%8A%9F%E8%83%BD_20240603_%23%E5%8A%9F%E8%83%BD%E6%A1%86_1.png)
+- [ ] 为指定文件夹单独设置同步表格、同步字段（暂未实现）
 # 使用教程
 - 获取飞书的appId、appSecret、appToken、tableID
 	- 登录[飞书开放平台 (feishu.cn)](https://open.feishu.cn/app/) 创建一个企业自建应用
@@ -39,9 +42,9 @@
 		- 窗口就相当于是这个代理服务器，关闭窗口就把这个代理服务器关闭了
 	- 之后需要启动代理服务器的话只需要导航到proxy-server文件夹，输入`node proxy.js`即可
 		- **为了避免每次同步前都要手动打开代理服务器，可以创建Quicke动作，将两个步骤和为一个步骤**
-			- 这是我创建的动作：[Quicker动作](https://getquicker.net/Sharedaction?code=9fd4c11f-480f-459f-b932-08dc83042634)
+			- 这是我创建的动作：[Quicker动作](https://getquicker.net/Sharedaction?code=9fd4c11f-480f-459f-b932-08dc83042634) （需要根据你自己的实际配置做些修改）
 - 将配置文件ObSyncFeishu.js、My-TP-OBSyncFeishu.md导入到自己的Obsidian库中
 	- My-TP-OBSyncFeishu.md文件放在Templater插件加载的文件夹下
 	- Templater插件使用教程：[PKMer_Obsidian 插件：Templater 可以替代核心模板插件的效率神器](https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/templater/templater-obsidian/)
 	- 在My-TP-OBSyncFeishu.md文件，填入自己的appId、appSecret、appToken、tableID
-- 现在ObsyncFeishu脚本就能够正常运行了
+- 现在ObsyncFeishu脚本就能够正常运行了！
