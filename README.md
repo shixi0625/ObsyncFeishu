@@ -17,7 +17,8 @@
 			- 查看、评论、编辑和管理多维表格
 		- 在凭证与基础信息这，你可以看到你的appId和appSecret
 		- 创建一个飞书多维表格，建议直接使用我的模板：[ObsyncFeishu模板](https://q2ssq80kzt.feishu.cn/base/Y4JcbyaqmawV8tsJ4h2c6Kp5nkf?from=from_copylink)
-			- 在自己的多维飞书表格中添加刚刚创建的应用![ObsyncFeishu_脚本教程_20240603_#飞书设置_2.png](https://shixi-rioto.oss-cn-shenzhen.aliyuncs.com/ObsyncFeishu_%E8%84%9A%E6%9C%AC%E6%95%99%E7%A8%8B_20240603_%23%E9%A3%9E%E4%B9%A6%E8%AE%BE%E7%BD%AE_2.png)
+			- 在自己的多维飞书表格中添加刚刚创建的应用
+![ObsyncFeishu_脚本教程_20240603_#飞书设置_2.png](https://shixi-rioto.oss-cn-shenzhen.aliyuncs.com/ObsyncFeishu_%E8%84%9A%E6%9C%AC%E6%95%99%E7%A8%8B_20240603_%23%E9%A3%9E%E4%B9%A6%E8%AE%BE%E7%BD%AE_2.png)
 		- 获取appToken：[多维表格的appToken不同情况下存在差异，具体获取方式点击查看](https://open.feishu.cn/document/server-docs/docs/bitable-v1/notification) 
 		- 获取tableID：多维表格URL中 table=xxxxx&view部分的xxxxx即为tableID
 - 运行本地代理服务器
