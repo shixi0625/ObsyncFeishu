@@ -8,18 +8,18 @@
 - [x] Obsidian与飞书多维表格之间数据的双向同步
 ![ObsyncFeishu_脚本功能_20240603_#功能框_1.png](https://shixi-rioto.oss-cn-shenzhen.aliyuncs.com/ObsyncFeishu_%E8%84%9A%E6%9C%AC%E5%8A%9F%E8%83%BD_20240603_%23%E5%8A%9F%E8%83%BD%E6%A1%86_1.png)
 - [ ] 为指定文件夹单独设置同步表格、同步字段（暂未实现）
+- [ ] 同时删除obsidian笔记和飞书记录（暂未实现）
 # 使用教程
 - 获取飞书的appId、appSecret、appToken、tableID
 	- 登录[飞书开放平台 (feishu.cn)](https://open.feishu.cn/app/) 创建一个企业自建应用
 		- 点击左侧的"版本管理与发布"，发布版本
-		- 点击左侧的“权限管理”，开通三个权限
+		- 点击左侧的“权限管理”，开通权限
 			- 查看、评论、编辑和管理多维表格
-			- 获取用户基本信息
-			- 获取用户 user ID
 		- 在凭证与基础信息这，你可以看到你的appId和appSecret
 		- 创建一个飞书多维表格，建议直接使用我的模板：[ObsyncFeishu模板](https://q2ssq80kzt.feishu.cn/base/Y4JcbyaqmawV8tsJ4h2c6Kp5nkf?from=from_copylink)
-		- 获取appToken：[接入指南 - 服务端 API - 开发文档 - 飞书开放平台 (feishu.cn)](https://open.feishu.cn/document/server-docs/docs/bitable-v1/notification)
-		- 获取tableID：多维表格URL中 table=xxxxx&view，中的xxxxx部分即为tableID
+			- 在自己的多维飞书表格中添加刚刚创建的应用![ObsyncFeishu_脚本教程_20240603_#飞书设置_2.png](https://shixi-rioto.oss-cn-shenzhen.aliyuncs.com/ObsyncFeishu_%E8%84%9A%E6%9C%AC%E6%95%99%E7%A8%8B_20240603_%23%E9%A3%9E%E4%B9%A6%E8%AE%BE%E7%BD%AE_2.png)
+		- 获取appToken：[多维表格的appToken不同情况下存在差异，具体获取方式点击查看](https://open.feishu.cn/document/server-docs/docs/bitable-v1/notification) 
+		- 获取tableID：多维表格URL中 table=xxxxx&view部分的xxxxx即为tableID
 - 运行本地代理服务器
 	- 安装Node.js和Node包管理器（npm）
 		- 访问Node.js官方网站：[Node.js](https://nodejs.org/)
@@ -43,8 +43,9 @@
 	- 之后需要启动代理服务器的话只需要导航到proxy-server文件夹，输入`node proxy.js`即可
 		- **为了避免每次同步前都要手动打开代理服务器，可以创建Quicke动作，将两个步骤和为一个步骤**
 			- 这是我创建的动作：[Quicker动作](https://getquicker.net/Sharedaction?code=9fd4c11f-480f-459f-b932-08dc83042634) （需要根据你自己的实际配置做些修改）
+			- [Quicker官网](https://getquicker.net/)
 - 将配置文件ObSyncFeishu.js、My-TP-OBSyncFeishu.md导入到自己的Obsidian库中
 	- My-TP-OBSyncFeishu.md文件放在Templater插件加载的文件夹下
-	- Templater插件使用教程：[PKMer_Obsidian 插件：Templater 可以替代核心模板插件的效率神器](https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/templater/templater-obsidian/)
+	- Templater插件使用教程：[Templater 可以替代核心模板插件的效率神器](https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/templater/templater-obsidian/)
 	- 在My-TP-OBSyncFeishu.md文件，填入自己的appId、appSecret、appToken、tableID
 - 现在ObsyncFeishu脚本就能够正常运行了！
